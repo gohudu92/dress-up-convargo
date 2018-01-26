@@ -2,8 +2,39 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Convargo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS files for Foundation -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   </head>
   <body>
+    <!-- Start Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">System Transportation</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+
+        </ul>
+      </div>
+    </div>
+    <!-- End Top Bar -->
+
+
+    <div class="callout large">
+      <div class="row column text-center">
+        <h1>Calculate all the payout of the different actors</h1>
+        <p class="lead">Easy to use (based on Convargo type prices)</p>
+      </div>
+    </div>
+<div class="row">
+<div class="medium-4 columns">
     <div id="trucker">
       <input class="name" type="text" placeholder="Trucker name"/>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
@@ -13,11 +44,36 @@
       <input class="name" type="text" placeholder="Shipper name"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
       <input class="volume" type="number" placeholder="Volume in m3"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+      <input class="option" type="checkbox" placeholder="Deductible option"> Deductible option</input>
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+    <button id="compute" class="button large">Compute</button>
+
+  </div>
+  <div class="medium-8 columns">
+    <div id="actors" style="display: flex; align-items: center;">
+      <ul class="vertical medium-horizontal menu expanded text-center">
+        <li><a href="#"><div class="stat">0€</div><span>shipper </span><span> debit</span></a></li>
+        <li><a href="#"><div class="stat">0€</div><span>trucker </span><span> credit</span></a></li>
+        <li><a href="#"><div class="stat">0€</div><span>insurance </span><span> credit</span></a></li>
+        <li><a href="#"><div class="stat">0€</div><span>treasury </span><span> credit</span></a></li>
+        <li><a href="#"><div class="stat">0€</div><span>convargo </span><span> credit</span></a></li>
+      </ul>
+    </div>
+    <img src="camion.svg" style="width: 500px; height: 500px;">
+  </div>
+</div>
+
+
+
+
+    <!-- Javascript files of convargo -->
     <script src="convargo.js"></script>
     <script src="index.js"></script>
+
+    <!-- Javascript files for Foundation -->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

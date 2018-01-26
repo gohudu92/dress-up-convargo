@@ -4,14 +4,11 @@
 (() => {
   const render = (actors) => {
     const fragment = document.createDocumentFragment();
-    const div = document.createElement('div');
+    const div = document.createElement('ul');
+    div.className = "vertical medium-horizontal menu expanded text-center";
     const template = actors.map(actor => {
       return `
-        <div class="actor">
-          <span>${actor.who}</span>
-          <span>${actor.type}</span>
-          <span>${actor.amount}</span>
-        </div>
+          <li><a href="#"><div class="stat">${actor.amount}€</div><span>${actor.who} </span><span> ${actor.type}</span></a></li>
       `;
     }).join('');
 

@@ -17,6 +17,12 @@ let CONVARGO = (() => {
     };
   };
 
+  const getshipper = () => {
+    return {
+      'name': document.querySelector('#shipper .name').value
+    };
+  };
+
   /**
    * Get discount percent according volume
    *
@@ -90,10 +96,12 @@ let CONVARGO = (() => {
 
     var actors = [{
       'who': 'shipper',
+      'name': getshipper(name),
       'type': 'debit',
       'amount': price + deductibleOption
     }, {
       'who': 'trucker',
+      'name': getTrucker(name),
       'type': 'credit',
       'amount': price - commission.value
     }, {
@@ -115,6 +123,7 @@ let CONVARGO = (() => {
 
   return {
     'getTrucker': getTrucker,
-    'payActors': payActors
+    'payActors': payActors,
+    'getshipper': getshipper
   };
 })();
